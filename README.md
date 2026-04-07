@@ -161,6 +161,9 @@ Install once. Use in all sessions after that.
 
 One rock. That it.
 
+> [!NOTE]
+> **Windows users:** This repo uses symlinks. On Windows, enable `git config core.symlinks true` before cloning (requires developer mode or admin). The plugin installer resolves symlinks to real files at install time, so symlinks work transparently after installation.
+
 ## Usage
 
 Trigger with:
@@ -232,7 +235,7 @@ Caveman makes Claude *speak* with fewer tokens. **Caveman Compress** makes Claud
 Your `CLAUDE.md` loads on **every session start**. A 1000-token project memory file costs you tokens every single time you open a project. Caveman Compress rewrites those files into caveman-speak so Claude reads less — without you losing the human-readable original.
 
 ```
-/caveman-compress CLAUDE.md
+/caveman:compress CLAUDE.md
 ```
 
 ```
@@ -275,7 +278,7 @@ Code blocks, inline code, URLs, file paths, commands, headings, table structure,
 | **caveman-compress** | Input tokens (memory files loaded per session) | ~45% |
 | **Both together** | The whole conversation | Output + input both shrunk |
 
-See the full [caveman-compress README](caveman-compress/README.md) for install, usage, and validation details.
+Compress is now built-in with the caveman plugin — no separate install needed. Both `/caveman` and `/caveman:compress` work once you install caveman.
 
 ## Star This Repo
 
