@@ -92,6 +92,63 @@ SessionStart hook ──writes "full"──▶ ~/.claude/.caveman-active ◀─�
 
 SessionStart stdout is injected as hidden system context — Claude sees it, users don't. The statusline runs as a separate process. The flag file is the bridge.
 
+## Rovo Dev
+
+Rovo Dev has its own event hooks system. Caveman hooks for Rovo Dev track mode changes via a flag file — same concept as Claude Code, different wiring.
+
+### What's Included
+
+#### `caveman-activate.js` — on_session_start hook
+
+- Runs once when a new Rovo Dev session starts
+- Writes `full` to `~/.rovodev/.caveman-active` (flag file)
+- Note: unlike Claude Code, Rovo Dev hook stdout goes to the log file, not agent context — the skill itself provides the caveman rules via `get_skill("caveman")`
+
+#### `caveman-mode-tracker.js` — on_user_prompt hook
+
+- Fires on every user prompt, checks for `/caveman` commands
+- Reads prompt from Rovo Dev's stdin JSON payload (`attributes.user_prompt`)
+- Writes the active mode to the flag file when a caveman command is detected
+- Supports: `full`, `lite`, `ultra`, `wenyan`, `wenyan-lite`, `wenyan-ultra`, `commit`, `review`, `compress`
+
+### Install
+
+One command:
+
+```bash
+bash hooks/rovodev/install.sh
+```
+
+Or from remote:
+
+```bash
+bash <(curl -s https://raw.githubusercontent.com/JuliusBrussee/caveman/main/hooks/rovodev/install.sh)
+```
+
+This installs the skill + hooks and wires them into `~/.rovodev/config.yml`. If `yq` is not available, it prints the YAML snippet to add manually (or use `/hooks` inside Rovo Dev's TUI).
+
+### Manual Configuration
+
+Add to `~/.rovodev/config.yml`:
+
+```yaml
+eventHooks:
+  events:
+    - name: "on_session_start"
+      commands:
+        - command: "node ~/.rovodev/hooks/rovodev/caveman-activate.js"
+    - name: "on_user_prompt"
+      commands:
+        - command: "node ~/.rovodev/hooks/rovodev/caveman-mode-tracker.js"
+```
+
+### Uninstall (Rovo Dev)
+
+1. Remove `~/.rovodev/hooks/rovodev/caveman-activate.js` and `~/.rovodev/hooks/rovodev/caveman-mode-tracker.js`
+2. Remove the `on_session_start` and `on_user_prompt` caveman entries from `~/.rovodev/config.yml`
+3. Delete `~/.rovodev/.caveman-active`
+4. Optionally remove `~/.agents/skills/caveman/`
+
 ## Uninstall
 
 If installed via plugin: disable the plugin — hooks deactivate automatically.

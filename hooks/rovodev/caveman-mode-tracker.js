@@ -1,20 +1,29 @@
 #!/usr/bin/env node
-// caveman — UserPromptSubmit hook to track which caveman mode is active
+// caveman — Rovo Dev on_user_prompt hook to track which caveman mode is active
 // Inspects user input for /caveman commands and writes mode to flag file
+//
+// Rovo Dev stdin payload format:
+// {
+//   "session_id": "...",
+//   "transcript_path": "...",
+//   "cwd": "...",
+//   "timestamp": "...",
+//   "hook_event_name": "on_user_prompt",
+//   "attributes": { "user_prompt": "..." }
+// }
 
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
-const { getDefaultMode } = require('./caveman-config');
 
-const flagPath = path.join(os.homedir(), '.claude', '.caveman-active');
+const flagPath = path.join(os.homedir(), '.rovodev', '.caveman-active');
 
 let input = '';
 process.stdin.on('data', chunk => { input += chunk; });
 process.stdin.on('end', () => {
   try {
     const data = JSON.parse(input);
-    const prompt = (data.prompt || '').trim().toLowerCase();
+    const prompt = (data.attributes && data.attributes.user_prompt || '').trim().toLowerCase();
 
     // Match /caveman commands
     if (prompt.startsWith('/caveman')) {
@@ -36,14 +45,12 @@ process.stdin.on('end', () => {
         else if (arg === 'wenyan-lite') mode = 'wenyan-lite';
         else if (arg === 'wenyan' || arg === 'wenyan-full') mode = 'wenyan';
         else if (arg === 'wenyan-ultra') mode = 'wenyan-ultra';
-        else mode = getDefaultMode();
+        else mode = 'full';
       }
 
-      if (mode && mode !== 'off') {
+      if (mode) {
         fs.mkdirSync(path.dirname(flagPath), { recursive: true });
         fs.writeFileSync(flagPath, mode);
-      } else if (mode === 'off') {
-        try { fs.unlinkSync(flagPath); } catch (e) {}
       }
     }
 

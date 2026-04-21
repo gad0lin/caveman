@@ -1,0 +1,150 @@
+2026-04-12 15:42:14,824 | INFO  | ============================================================
+2026-04-12 15:42:14,824 | INFO  | Caveman Eval — Rovo Dev (serve mode)
+2026-04-12 15:42:14,824 | INFO  | ============================================================
+2026-04-12 15:42:14,824 | INFO  | CLI:     Rovo Dev CLI: 202604.11.1
+Operating System: Darwin 25.3.0 (arm64)
+Git: git version 2.52.0
+2026-04-12 15:42:14,824 | INFO  | Mode:    serve (http://localhost:18899)
+2026-04-12 15:42:14,824 | INFO  | Arms:    ['baseline', 'terse', 'caveman']
+2026-04-12 15:42:14,824 | INFO  | Prompts: 10
+2026-04-12 15:42:14,824 | INFO  | Log:     /Users/kbarczynski/dev/caveman/evals/snapshots/rovodev_eval.log
+2026-04-12 15:42:14,825 | INFO  | 
+2026-04-12 15:42:14,825 | INFO  | ── arm: baseline ──
+2026-04-12 15:42:14,825 | INFO  |   [1/30] Why does my React component re-render every time the parent 
+2026-04-12 15:42:14,825 | DEBUG |   FULL PROMPT: Why does my React component re-render every time the parent updates?
+2026-04-12 15:43:38,029 | INFO  |     → ok (83.2s, 3362 chars, 948 out_tokens)
+2026-04-12 15:43:38,029 | DEBUG |     RESPONSE PREVIEW: ## Why React Components Re-render on Every Parent Update  This is one of the mos
+2026-04-12 15:43:38,029 | INFO  |   [2/30] Explain database connection pooling.
+2026-04-12 15:43:38,029 | DEBUG |   FULL PROMPT: Explain database connection pooling.
+2026-04-12 15:44:13,143 | INFO  |     → ok (35.1s, 5509 chars, 1487 out_tokens)
+2026-04-12 15:44:13,143 | DEBUG |     RESPONSE PREVIEW: # Database Connection Pooling  ## The Problem It Solves  Every time an applicati
+2026-04-12 15:44:13,144 | INFO  |   [3/30] What's the difference between TCP and UDP?
+2026-04-12 15:44:13,144 | DEBUG |   FULL PROMPT: What's the difference between TCP and UDP?
+2026-04-12 15:44:26,358 | INFO  |     → ok (13.2s, 1954 chars, 548 out_tokens)
+2026-04-12 15:44:26,358 | DEBUG |     RESPONSE PREVIEW: ## TCP vs UDP  Both are **transport layer protocols** (Layer 4) used to send dat
+2026-04-12 15:44:26,358 | INFO  |   [4/30] How do I fix a memory leak in a long-running Node.js process
+2026-04-12 15:44:26,358 | DEBUG |   FULL PROMPT: How do I fix a memory leak in a long-running Node.js process?
+2026-04-12 15:44:57,746 | INFO  |     → ok (31.4s, 5008 chars, 1680 out_tokens)
+2026-04-12 15:44:57,747 | DEBUG |     RESPONSE PREVIEW: # Fixing Memory Leaks in Long-Running Node.js Processes  Here's a practical guid
+2026-04-12 15:44:57,747 | INFO  |   [5/30] What does the SQL EXPLAIN command tell me?
+2026-04-12 15:44:57,747 | DEBUG |   FULL PROMPT: What does the SQL EXPLAIN command tell me?
+2026-04-12 15:45:15,941 | INFO  |     → ok (18.2s, 2344 chars, 671 out_tokens)
+2026-04-12 15:45:15,941 | DEBUG |     RESPONSE PREVIEW: The SQL `EXPLAIN` command shows you the **query execution plan** — essentially, 
+2026-04-12 15:45:15,941 | INFO  |   [6/30] How does a hash table handle collisions?
+2026-04-12 15:45:15,941 | DEBUG |   FULL PROMPT: How does a hash table handle collisions?
+2026-04-12 15:45:33,132 | INFO  |     → ok (17.2s, 2348 chars, 739 out_tokens)
+2026-04-12 15:45:33,132 | DEBUG |     RESPONSE PREVIEW: ## Hash Table Collision Handling  When two keys hash to the same index (a **coll
+2026-04-12 15:45:33,133 | INFO  |   [7/30] Why am I getting CORS errors in my browser console?
+2026-04-12 15:45:33,133 | DEBUG |   FULL PROMPT: Why am I getting CORS errors in my browser console?
+2026-04-12 15:45:53,389 | INFO  |     → ok (20.3s, 3720 chars, 1077 out_tokens)
+2026-04-12 15:45:53,389 | DEBUG |     RESPONSE PREVIEW: # CORS Errors Explained  CORS (Cross-Origin Resource Sharing) errors occur when 
+2026-04-12 15:45:53,389 | INFO  |   [8/30] What's the point of using a debouncer on a search input?
+2026-04-12 15:45:53,389 | DEBUG |   FULL PROMPT: What's the point of using a debouncer on a search input?
+2026-04-12 15:46:10,624 | INFO  |     → ok (17.2s, 2342 chars, 681 out_tokens)
+2026-04-12 15:46:10,624 | DEBUG |     RESPONSE PREVIEW: ## Why Use a Debouncer on a Search Input?  A **debouncer** delays executing a fu
+2026-04-12 15:46:10,624 | INFO  |   [9/30] How does git rebase differ from git merge?
+2026-04-12 15:46:10,624 | DEBUG |   FULL PROMPT: How does git rebase differ from git merge?
+2026-04-12 15:46:45,648 | INFO  |     → ok (35.0s, 2111 chars, 603 out_tokens)
+2026-04-12 15:46:45,648 | DEBUG |     RESPONSE PREVIEW: ## Git Rebase vs Git Merge  Both commands integrate changes from one branch into
+2026-04-12 15:46:45,648 | INFO  |   [10/30] When should I use a queue vs a topic in messaging systems?
+2026-04-12 15:46:45,648 | DEBUG |   FULL PROMPT: When should I use a queue vs a topic in messaging systems?
+2026-04-12 15:47:06,292 | INFO  |     → ok (20.6s, 3060 chars, 824 out_tokens)
+2026-04-12 15:47:06,292 | DEBUG |     RESPONSE PREVIEW: # Queue vs Topic in Messaging Systems  Great question! Here's a clear breakdown:
+2026-04-12 15:47:06,292 | INFO  |   arm baseline done in 291s
+
+2026-04-12 15:47:06,292 | INFO  | ── arm: terse ──
+2026-04-12 15:47:06,292 | INFO  |   [11/30] Why does my React component re-render every time the parent 
+2026-04-12 15:47:06,292 | DEBUG |   FULL PROMPT: Why does my React component re-render every time the parent updates?
+2026-04-12 15:47:17,145 | INFO  |     → ok (10.9s, 1647 chars, 478 out_tokens)
+2026-04-12 15:47:17,145 | DEBUG |     RESPONSE PREVIEW: ## Why Your React Component Re-renders on Every Parent Update  By default, **Rea
+2026-04-12 15:47:17,146 | INFO  |   [12/30] Explain database connection pooling.
+2026-04-12 15:47:17,146 | DEBUG |   FULL PROMPT: Explain database connection pooling.
+2026-04-12 15:47:30,619 | INFO  |     → ok (13.5s, 2112 chars, 575 out_tokens)
+2026-04-12 15:47:30,619 | DEBUG |     RESPONSE PREVIEW: ## Database Connection Pooling  **The Problem:** Opening a database connection i
+2026-04-12 15:47:30,619 | INFO  |   [13/30] What's the difference between TCP and UDP?
+2026-04-12 15:47:30,619 | DEBUG |   FULL PROMPT: What's the difference between TCP and UDP?
+2026-04-12 15:47:37,961 | INFO  |     → ok (7.3s, 687 chars, 181 out_tokens)
+2026-04-12 15:47:37,961 | DEBUG |     RESPONSE PREVIEW: **TCP (Transmission Control Protocol)** - **Connection-oriented** — establishes 
+2026-04-12 15:47:37,961 | INFO  |   [14/30] How do I fix a memory leak in a long-running Node.js process
+2026-04-12 15:47:37,961 | DEBUG |   FULL PROMPT: How do I fix a memory leak in a long-running Node.js process?
+2026-04-12 15:48:10,344 | INFO  |     → ok (32.4s, 2476 chars, 825 out_tokens)
+2026-04-12 15:48:10,344 | DEBUG |     RESPONSE PREVIEW: ## Fixing Memory Leaks in Long-Running Node.js Processes  ### 1. Identify the Le
+2026-04-12 15:48:10,344 | INFO  |   [15/30] What does the SQL EXPLAIN command tell me?
+2026-04-12 15:48:10,344 | DEBUG |   FULL PROMPT: What does the SQL EXPLAIN command tell me?
+2026-04-12 15:48:16,592 | INFO  |     → ok (6.2s, 534 chars, 122 out_tokens)
+2026-04-12 15:48:16,593 | DEBUG |     RESPONSE PREVIEW: `EXPLAIN` shows the **query execution plan** — how the database will execute a S
+2026-04-12 15:48:16,593 | INFO  |   [16/30] How does a hash table handle collisions?
+2026-04-12 15:48:16,593 | DEBUG |   FULL PROMPT: How does a hash table handle collisions?
+2026-04-12 15:48:26,623 | INFO  |     → ok (10.0s, 975 chars, 289 out_tokens)
+2026-04-12 15:48:26,623 | DEBUG |     RESPONSE PREVIEW: Hash tables handle collisions using two main strategies:  ## 1. Chaining (Open H
+2026-04-12 15:48:26,623 | INFO  |   [17/30] Why am I getting CORS errors in my browser console?
+2026-04-12 15:48:26,623 | DEBUG |   FULL PROMPT: Why am I getting CORS errors in my browser console?
+2026-04-12 15:48:38,709 | INFO  |     → ok (12.1s, 1546 chars, 433 out_tokens)
+2026-04-12 15:48:38,709 | DEBUG |     RESPONSE PREVIEW: ## CORS Errors Explained  CORS (Cross-Origin Resource Sharing) errors occur when
+2026-04-12 15:48:38,709 | INFO  |   [18/30] What's the point of using a debouncer on a search input?
+2026-04-12 15:48:38,709 | DEBUG |   FULL PROMPT: What's the point of using a debouncer on a search input?
+2026-04-12 15:48:47,146 | INFO  |     → ok (8.4s, 400 chars, 108 out_tokens)
+2026-04-12 15:48:47,146 | DEBUG |     RESPONSE PREVIEW: A debouncer delays triggering the search until the user **stops typing** for a s
+2026-04-12 15:48:47,146 | INFO  |   [19/30] How does git rebase differ from git merge?
+2026-04-12 15:48:47,147 | DEBUG |   FULL PROMPT: How does git rebase differ from git merge?
+2026-04-12 15:48:57,413 | INFO  |     → ok (10.3s, 905 chars, 252 out_tokens)
+2026-04-12 15:48:57,413 | DEBUG |     RESPONSE PREVIEW: **`git merge`** combines two branches by creating a new "merge commit" that join
+2026-04-12 15:48:57,413 | INFO  |   [20/30] When should I use a queue vs a topic in messaging systems?
+2026-04-12 15:48:57,413 | DEBUG |   FULL PROMPT: When should I use a queue vs a topic in messaging systems?
+2026-04-12 15:49:06,681 | INFO  |     → ok (9.3s, 734 chars, 180 out_tokens)
+2026-04-12 15:49:06,681 | DEBUG |     RESPONSE PREVIEW: ## Queue vs Topic  **Queue** — point-to-point, one consumer processes each messa
+2026-04-12 15:49:06,681 | INFO  |   arm terse done in 120s
+
+2026-04-12 15:49:06,681 | INFO  | ── arm: caveman ──
+2026-04-12 15:49:06,681 | INFO  |   [21/30] Why does my React component re-render every time the parent 
+2026-04-12 15:49:06,681 | DEBUG |   FULL PROMPT: Why does my React component re-render every time the parent updates?
+2026-04-12 15:49:17,511 | INFO  |     → ok (10.8s, 659 chars, 195 out_tokens)
+2026-04-12 15:49:17,511 | DEBUG |     RESPONSE PREVIEW: By default, React re-renders child when parent re-renders. Common causes:  1. **
+2026-04-12 15:49:17,511 | INFO  |   [22/30] Explain database connection pooling.
+2026-04-12 15:49:17,511 | DEBUG |   FULL PROMPT: Explain database connection pooling.
+2026-04-12 15:49:25,674 | INFO  |     → ok (8.2s, 598 chars, 153 out_tokens)
+2026-04-12 15:49:25,675 | DEBUG |     RESPONSE PREVIEW: Pool reuse open DB connections. No new connection per request. Skip TCP handshak
+2026-04-12 15:49:25,675 | INFO  |   [23/30] What's the difference between TCP and UDP?
+2026-04-12 15:49:25,675 | DEBUG |   FULL PROMPT: What's the difference between TCP and UDP?
+2026-04-12 15:49:33,423 | INFO  |     → ok (7.7s, 533 chars, 152 out_tokens)
+2026-04-12 15:49:33,423 | DEBUG |     RESPONSE PREVIEW: **TCP** — connection-based. Handshake first. Guarantees delivery, order, error c
+2026-04-12 15:49:33,423 | INFO  |   [24/30] How do I fix a memory leak in a long-running Node.js process
+2026-04-12 15:49:33,423 | DEBUG |   FULL PROMPT: How do I fix a memory leak in a long-running Node.js process?
+2026-04-12 15:49:46,404 | INFO  |     → ok (13.0s, 1099 chars, 340 out_tokens)
+2026-04-12 15:49:46,407 | DEBUG |     RESPONSE PREVIEW: **Find leak first:**  ```bash node --inspect app.js # Chrome: chrome://inspect →
+2026-04-12 15:49:46,409 | INFO  |   [25/30] What does the SQL EXPLAIN command tell me?
+2026-04-12 15:49:46,409 | DEBUG |   FULL PROMPT: What does the SQL EXPLAIN command tell me?
+2026-04-12 15:49:53,802 | INFO  |     → ok (7.4s, 391 chars, 110 out_tokens)
+2026-04-12 15:49:53,802 | DEBUG |     RESPONSE PREVIEW: `EXPLAIN` show query execution plan — how DB fetch data without running query.  
+2026-04-12 15:49:53,803 | INFO  |   [26/30] How does a hash table handle collisions?
+2026-04-12 15:49:53,803 | DEBUG |   FULL PROMPT: How does a hash table handle collisions?
+2026-04-12 15:49:59,734 | INFO  |     → ok (5.9s, 490 chars, 120 out_tokens)
+2026-04-12 15:49:59,734 | DEBUG |     RESPONSE PREVIEW: Two main strategies:  **Chaining (separate chaining)** — each bucket holds linke
+2026-04-12 15:49:59,735 | INFO  |   [27/30] Why am I getting CORS errors in my browser console?
+2026-04-12 15:49:59,735 | DEBUG |   FULL PROMPT: Why am I getting CORS errors in my browser console?
+2026-04-12 15:50:09,210 | INFO  |     → ok (9.5s, 934 chars, 270 out_tokens)
+2026-04-12 15:50:09,210 | DEBUG |     RESPONSE PREVIEW: Browser block request from different origin. Server not send `Access-Control-All
+2026-04-12 15:50:09,211 | INFO  |   [28/30] What's the point of using a debouncer on a search input?
+2026-04-12 15:50:09,211 | DEBUG |   FULL PROMPT: What's the point of using a debouncer on a search input?
+2026-04-12 15:50:14,612 | INFO  |     → ok (5.4s, 209 chars, 53 out_tokens)
+2026-04-12 15:50:14,612 | DEBUG |     RESPONSE PREVIEW: Delay API call until user stop typing. No debounce = API fire every keystroke. W
+2026-04-12 15:50:14,612 | INFO  |   [29/30] How does git rebase differ from git merge?
+2026-04-12 15:50:14,612 | DEBUG |   FULL PROMPT: How does git rebase differ from git merge?
+2026-04-12 15:50:20,743 | INFO  |     → ok (6.1s, 461 chars, 144 out_tokens)
+2026-04-12 15:50:20,743 | DEBUG |     RESPONSE PREVIEW: **Merge**: joins two branches with merge commit. Preserves full history. Non-des
+2026-04-12 15:50:20,743 | INFO  |   [30/30] When should I use a queue vs a topic in messaging systems?
+2026-04-12 15:50:20,743 | DEBUG |   FULL PROMPT: When should I use a queue vs a topic in messaging systems?
+2026-04-12 15:50:27,041 | INFO  |     → ok (6.3s, 378 chars, 94 out_tokens)
+2026-04-12 15:50:27,041 | DEBUG |     RESPONSE PREVIEW: **Queue** — one consumer processes each message. Point-to-point. Use for: task d
+2026-04-12 15:50:27,041 | INFO  |   arm caveman done in 80s
+
+2026-04-12 15:50:27,043 | INFO  | Snapshot saved to /Users/kbarczynski/dev/caveman/evals/snapshots/results_rovodev.json
+2026-04-12 15:50:27,043 | INFO  | Detailed log at /Users/kbarczynski/dev/caveman/evals/snapshots/rovodev_eval.log
+2026-04-12 15:50:27,043 | INFO  | 
+2026-04-12 15:50:27,043 | INFO  | Measure with:
+2026-04-12 15:50:27,043 | INFO  |   uv run --with tiktoken python evals/measure.py --snapshot /Users/kbarczynski/dev/caveman/evals/snapshots/results_rovodev.json
+2026-04-12 15:50:27,043 | INFO  | 
+2026-04-12 15:50:27,043 | INFO  | ── Summary ──
+2026-04-12 15:50:27,043 | INFO  |   baseline: 31758 chars total, 291s, 0 errors
+2026-04-12 15:50:27,043 | INFO  |   terse: 12016 chars total, 120s, 0 errors
+2026-04-12 15:50:27,043 | INFO  |   caveman: 5752 chars total, 80s, 0 errors

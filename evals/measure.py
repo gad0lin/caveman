@@ -46,11 +46,20 @@ def fmt_pct(x: float) -> str:
 
 
 def main() -> None:
-    if not SNAPSHOT.exists():
-        print(f"No snapshot at {SNAPSHOT}. Run `python evals/llm_run.py` first.")
+    import sys
+
+    # Accept --snapshot <path> to read a different snapshot file
+    snapshot_path = SNAPSHOT
+    if "--snapshot" in sys.argv:
+        idx = sys.argv.index("--snapshot")
+        if idx + 1 < len(sys.argv):
+            snapshot_path = Path(sys.argv[idx + 1])
+
+    if not snapshot_path.exists():
+        print(f"No snapshot at {snapshot_path}. Run `python evals/llm_run.py` first.")
         return
 
-    data = json.loads(SNAPSHOT.read_text())
+    data = json.loads(snapshot_path.read_text())
     arms = data["arms"]
     meta = data.get("metadata", {})
 
